@@ -3,6 +3,8 @@
 # Overview
 This set of playbooks in this example show how to deploy Local & Global NSX Managers to support a Federation deployment. This example deploys one site with one Local Manager cluster and one Global Manager Cluster. It also registers the Local Manager Site with the Global Manager. It also shows an example how to deploy and register a Standby Global Manager with the Active Global Manager Cluster. The playbooks can be copied and used for a second site and required vCenter details for that site can be added in the variables.yml file.
 
+![](./images/Federation.png)
+
 There are the following playbooks and a common variable file:
 
 * answerfile.yml: This is where all variables are recorded and should be changed to match your environment. 
@@ -29,8 +31,8 @@ To delete all objects, change the 'state' to 'absent' in the variables file and 
 * 10_global_managers_vip.yml
 * Delete the second and third Global Managers using NSX UI.
 * 07_configure_gm_compute_manager.yml
-* 06_local_managers_vip.yaml
 * Delete the first Global Manager using vSphere UI.
+* 05_local_managers_vip.yaml
 * 04_add_nsx_license.yml
 * Delete the second and third Local Managers using NSX UI.
 * 02_configure_lm_compute_manager.yml
